@@ -1,0 +1,58 @@
+  <div class="d-flex flex-row justify-content-center py-3">
+    <h2><%= @user.username %>'s Profile</h2>
+  </div>
+
+  <div class="d-flex flex-row justify-content-around pt-3">
+    <div>
+      <h3>Hosted Events: <%= @user.events.count %></h3>
+      <ul>
+        <% if @user.events.empty? %>
+          <p>User is not hosting</p>
+        <% else %>
+          <% @user.events.each do |event| %>
+            <li>
+            <%=link_to event.title, event_path(event) %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <div>
+      <% if yes_reservation_pending.any? %>
+        <h3>Pending Accept: <%= @user.events.count %></h3>
+        <ul>
+          <% if @user.events.empty? %>
+            <p>User is not hosting</p>
+          <% else %>
+            <% @user.events.each do |event| %>
+              <li><%=link_to event.title, event_path(event) %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+
+    <div>
+      <h3>Upcoming Events</h3>
+      <% yes_reservation_future.each do |rsvp| %>
+        <li class="is-capitalized">   
+          <%= link_to rsvp.event.title, rsvp.event, class: "is-size-5-desktop" %>
+        </li>
+      <% end %>
+
+    </div>
+
+    <div>
+      <h3>Attended Events </h3>
+        <% if yes_reservation_past.any?%>
+            <ul>
+              <% yes_reservation_past.each do |rsvp| %>
+                <li class="is-capitalized">
+                  <%= link_to rsvp.event.title, rsvp.event, class: "is-size-5-desktop" %>
+                </li>
+              <% end %>
+            </ul>
+        <% else %>
+        <% end %>
+    </div>
+  </div>

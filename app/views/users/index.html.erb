@@ -1,0 +1,42 @@
+<div class="d-flex flex-row justify-content-center">
+  <div class="d-flex flex-column justify-content-center col-4">
+  
+    <div class="d-flex flex-row justify-content-center my-3">
+      <h2>Guest List for <%= @event.title %> </h2>
+    </div>
+    
+
+    <div class="d-flex flex-column justify-content-around pl-5">
+      <% @users_show.each do |user| %>
+
+        <div class="pt-3">
+          <h5 class="">Name</h5>
+          <%= user.username %>
+        </div>
+
+        <div class="pt-3">
+          <h5 class="">Status</h5>
+
+          <% unless find_invitation_element(@event, user).nil? %>
+              <span class=""><%= find_invitation_element(@event, user).status %><span>
+            <% else %>
+              no invited
+            <% end %>
+        </div>
+
+        <div class="pt-3 border-bottom">
+          <h5 class="">Action</h5>
+          <% if find_invitation_element(@event, user).nil? %>
+              <%= button_to "Invite", invitations_path(event_id: params[:event_id], user_id: user.id), class: "btn-success px-4 mb-4" %>
+            <% else %>
+              <%= button_to "Cancel Invitation", invitation_path(id: find_invitation_element(@event, user).id,event_id: @event.id, user_id: user.id,  status: 'cancelled'), method: :delete, class: "btn-danger px-4 mb-4"  %>
+            <% end %>
+        </div>
+        <% end %>
+   
+        <div class="pt-4">
+          <%= link_to 'Back to Event Details', event_path(id: params[:event_id]), class: "button is-fullwidth" %>
+        </div>
+    </div>
+  </div>
+</div>

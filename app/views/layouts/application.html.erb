@@ -11,6 +11,36 @@
   </head>
 
   <body>
+    <nav class="row border-bottom bg-primary">
+      <div class="col-7">
+        <%= link_to root_path, class: "" do %>
+          <h1 class="text-light pl-3">Private</h1>
+        <% end %>
+      </div>
+      <div class= "col-5">
+        <div class="row pt-3 justify-content-around">
+          <p class="nav-item">
+            <%= link_to "Create Event", new_event_path, class: "text-light" %>
+          </p>
+          <% if current_user %>
+            <p class="nav-item">
+              <%= link_to current_user.username, user_path(current_user), class: "text-light" %>
+            </p>
+            <p>
+              <%= link_to "Logout", logout_path, class: "text-light" %>
+            </p>
+          <% else %>
+            <p class="nav-item">
+              <%= link_to 'Log In', login_path, class: "text-light" %>
+            </p>
+            <p class="nav-item">
+              <%= link_to 'Sign Up', signup_path, class: "text-light" %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

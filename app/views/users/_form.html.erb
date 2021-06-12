@@ -1,0 +1,13 @@
+<div class="container d-flex flex-row justify-content-center">
+  <div class="col-4 d-flex flex-column align-items-center pt-3 pb-4">
+    <%= form_with(model: user, local: true) do |f| %>
+      <div class="mb-4">
+        <%= f.label :username, class: "label" %>
+        <br />
+        <%= f.text_field :username, class: "input", autofocus: true %>
+      </div>
+
+      <div>
+        <%= f.submit "Sign Up", class: "px-4 btn-success" %>
+      </div>
+    <% end %>

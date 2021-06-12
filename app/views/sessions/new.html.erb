@@ -1,0 +1,17 @@
+<div class="container d-flex flex-row justify-content-center">
+  <div class="col-4 d-flex flex-column align-items-center pt-3 pb-4">
+    <h2 class="fw-bold">Log In</h2>
+    <%= form_with url: sessions_path, local: true do |form| %>
+      <div class="mb-4">
+        <%= form.label :username, class: "label" %>
+        <br />
+        <%= form.text_field :username, class: "input", autofocus: true %>
+      </div>
+
+      <div>
+        <%= form.submit "Log in", class: "px-5 btn-success" %>
+      </div>
+     
+    <% end %>
+  </div>
+</div>

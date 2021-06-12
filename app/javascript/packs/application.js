@@ -8,6 +8,17 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import { Application } from "stimulus"
+import { definitionsFromContext } from "stimulus/webpack-helpers"
+
+
+import "bootstrap"
+require("rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+request("channels")
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
