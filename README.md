@@ -49,7 +49,7 @@ To get a local copy up and running follow these simple example steps:
 👤 **German Cobian**
 
 * GitHub: [@German-Cobian](https://github.com/German-Cobian)
-* Twitter: [@GermanCobian3](https://twitter.com/GermanCobian3)
+* Twitter: [@GermanCobian1](https://twitter.com/GermanCobian1)
 * LinkedIn: [@german-cobian](https://www.linkedin.com/in/german-cobian/)
 
 
@@ -64,11 +64,8 @@ Give a ⭐️ if you like this project!
 
 
 ## Acknowledgments
-
-* Microverse
-* The Odin Project
-
+Guidelines for this project supplied by [The Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations)
 
 ## 📝 License
 
-This project is [MIT](https://github.com/German-Cobian/Re-former/blob/re-former-feature/LICENSE) licensed.# README
+This project is [MIT](https://github.com/German-Cobian/Re-former/blob/re-former-feature/LICENSE) licensed.
