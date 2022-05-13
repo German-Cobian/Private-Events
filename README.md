@@ -4,8 +4,6 @@
 
 This app is an exercise in the main concepts of Associations in Rails (mimicks the main features of Eventbrite).
 
-![Enter-post](/app/assets/images/Enter-post.png?raw=true "Enter post")
-
 The landing page ( `http://localhost:3000/` ) displays the list of all events, categorized as "Upcoming" or "Past".
 
 ![Landing page](/app/assets/images/Landing-page.png?raw=true "Landing page")
