@@ -6,13 +6,13 @@ This app is an exercise in the main concepts of Associations in Rails (mimicks t
 
 ![Enter-post](/app/assets/images/Enter-post.png?raw=true "Enter post")
 
-![Captura de Pantalla 2021-05-04 a la(s) 11 21 10](https://user-images.githubusercontent.com/68709712/117051288-3b68e200-accb-11eb-8742-03bcdb189d3c.png)
-
-The landing page ( `http://localhost:3000/` ) displays the list of all events, categorized by upcoming and past ones.
+The landing page ( `http://localhost:3000/` ) displays the list of all events, categorized as "Upcoming" or "Past".
 
 ![Landing page](/app/assets/images/Landing-page.png?raw=true "Landing page")
 
-Only signed-in users can register to events. Links in the nav bar allow users to Sign Up, Log In, view all posted Events and Logout if signed in. When Logged-in, a user can access private pages to create events 
+Links in the nav bar allow users to sign-Up, log-In, and view all posted events. 
+
+When Logged-in, a user can access private pages to create events,
 
 ![Create event](/app/assets/images/Create-event.png?raw=true "Create event")
 
@@ -20,7 +20,7 @@ and to view events he/she is hosting, is enrolled in and are upcoming, or was en
 
 ![Event enrolled](/app/assets/images/Event-enrolled.png?raw=true "Event enrolled in")
 
-Every logged-in user can invite other users to an event. Only upcoming events show the option to invite other users.
+After an event is successfully created, the user gets redirected to the event's show page. The user can then invite other users to events he/she is hosting. Only upcoming events show the option to invite other users.
 
 ![Invite](/app/assets/images/Invite.png?raw=true "Invite")
 
@@ -28,15 +28,13 @@ The invited user has the option to accept the invitation, and so, enroll in the 
 
 ![Enroll in event](/app/assets/images/Enroll-in-event.png?raw=true "Enroll in event")
 
-Users have the option to uninvite to events,
+Users have the option to uninvite to events they are hosting,
 
 ![Invitation cancel](/app/assets/images/Invitation-cancel.png?raw=true "Invitation cancel")
 
-and to unenroll in events. 
+and to unenroll from events they had signed-up for. 
 
 ![Event-cancel](/app/assets/images/Event-cancel.png?raw=true "Event cancel")
-
-After an event is successfully created, the user gets redirected to the event's show page.
 
 
 ## Getting Started
@@ -94,8 +92,8 @@ Give a ⭐️ if you like this project!
 
 
 ## Acknowledgments
-Guidelines for this project supplied by [The Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations)
+Guidelines for this project supplied by [The Odin Project](https://www.theodinproject.com/lessons/ruby-on-rails-private-events)
 
 ## 📝 License
 
-This project is [MIT](https://github.com/German-Cobian/Re-former/blob/re-former-feature/LICENSE) licensed.
+This project is [MIT](https://github.com/German-Cobian/Private-Events/blob/develop/LICENSE) licensed.
